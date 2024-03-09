@@ -21,8 +21,7 @@ class Student(Person):
 
     #   Function Name: calculate
     #   Return: A character denoting the grade.
-    
-    
+    #
     def __init__(self, firstName, lastName, idNumber):
         self.firstName = firstName
         self.lastName = lastName
@@ -32,19 +31,14 @@ class Student(Person):
         print("Name:", self.lastName + ",", self.firstName)
         print("ID:", self.idNumber)
 
-
 class Student(Person):
-    def __init__(self, firstName, lastName, idNumber, testScores):
+    def __init__(self, firstName, lastName, idNumber, scores):
         super().__init__(firstName, lastName, idNumber)
-        self.testScores = testScores
+        self.scores = scores
 
     def calculate(self):
-        total = 0
-
-        for testScore in self.testScores:
-            total += testScore
-
-        avg = total / len(self.testScores)
+        total = sum(self.scores)
+        avg = total / len(self.scores)
 
         if 90 <= avg <= 100:
             return 'O'
@@ -57,6 +51,10 @@ class Student(Person):
         if 40 <= avg < 55:
             return 'D'
         return 'T'
+
+
+
+
 line = input().split()
 firstName = line[0]
 lastName = line[1]
