@@ -1,4 +1,3 @@
-# Enter your code here. Read input from STDIN. Print output to STDOUT
 actual_return_date = list(map(int, input().split()))
 expected_return_date = list(map(int, input().split()))
 
