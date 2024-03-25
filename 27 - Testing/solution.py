@@ -46,8 +46,6 @@ def TestWithEmptyArray():
         pass
     else:
         assert False
-
-
 def TestWithUniqueValues():
     seq = TestDataUniqueValues.get_array()
     assert len(seq) >= 2
