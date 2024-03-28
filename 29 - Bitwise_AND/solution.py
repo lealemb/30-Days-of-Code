@@ -24,7 +24,6 @@ N = 5
 K = 2
 
 print(bitwiseAnd(N, K))
-
 # This part of the code is for HackerRank's input/output handling
 # Comment it out if you're testing the function locally
 if __name__ == '__main__':
